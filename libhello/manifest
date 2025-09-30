@@ -1,0 +1,17 @@
+: 1
+name: libhello
+version: 0.1.0-a.0.z
+language: c++
+project: hello
+summary: hello C++ library
+license: GPL-3.0-or-later ; GNU General Public License v3.0 or later.
+description-file: README.md
+url: https://github.com/wroyca/hello
+email: wroy@proton.me
+#build-error-email: wroy@proton.me
+depends: * build2 >= 0.17.0
+depends: * bpkg >= 0.17.0
+#depends: libhello ^1.0.0
+builds: &windows
+builds: -32 ; 64-bit targets only
+builds: -clang ; clang is not supported
